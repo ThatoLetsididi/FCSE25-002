@@ -259,3 +259,7 @@ body {
     padding-right: 20px;
     padding-left: 0px;
 }
+.navbar-nav:hover {
+     color: #44a0fcce;
+    background-color: #ffffff;
+        }
