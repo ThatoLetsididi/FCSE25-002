@@ -1,0 +1,28 @@
+function validateForm() {
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let nameError = document.getElementById("nameError");
+    let emailError = document.getElementById("emailError");
+    let namePattern = /^[A-Za-z\s]+$/; // Only letters and spaces
+    let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Standard email format
+
+    let valid = true;
+
+    // Name Validation
+    if (!namePattern.test(name)) {
+        nameError.innerText = "Name must contain only letters.";
+        valid = false;
+    } else {
+        nameError.innerText = "";
+    }
+
+    // Email Validation
+    if (!emailPattern.test(email)) {
+        emailError.innerText = "Invalid email format.";
+        valid = false;
+    } else {
+        emailError.innerText = "";
+    }
+
+    return valid; // If both validations pass, form submits
+}
