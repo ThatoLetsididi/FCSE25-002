@@ -74,7 +74,7 @@ body {
     color: var(--black);
 }
 
-/* Navigation */
+
 
 
 /* Hero Section */
@@ -127,10 +127,7 @@ body {
     background-color:  #44a0fcce;
     color: var(--white);
     padding: 50px 0 20px;
-    margin-top: 50px;
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-bottom: 20px;
+    margin: 50px 0 0;
     border-radius: 8px;
 }
 
@@ -139,11 +136,13 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 40px;
     margin-bottom: 30px;
+    padding: auto;
 }
 
 .footer-logo {
     max-width: 150px;
     margin-bottom: 20px;
+    
 }
 
 .footer-section h3 {
@@ -260,6 +259,81 @@ body {
     padding-left: 0px;
 }
 .navbar-nav:hover {
-     color: #44a0fcce;
+    color: #44a0fcce;
     background-color: #07a701;
-        }
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 768px) {
+   .about-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sidebar {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .about-content {
+        width: 100%;
+    }
+    
+    .navbar-nav {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .navbar-nav a {
+        display: block;
+        padding: 10px 0;
+    }
+    
+}
+.container.my-5 img {
+    border-radius: 10px;
+    box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.12);
+}
+
+.btn {
+    border-radius: 25px;
+    padding: 10px 30px;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: background 0.2s, color 0.2s;
+    margin-bottom: 10px;
+    margin: 20px;
+}
+
+.btn-primary {
+    background-color: #2e8b57;
+    border: none;
+    
+}
+
+.btn-primary:hover {
+    background-color: #1e5631;
+    color: #fff;
+}
+
+.btn-secondary {
+    background-color: #44a0fcce;
+    border: none;
+    color: #fff;
+}
+
+.btn-secondary:hover {
+    background-color: #0066cc;
+    color: #fff;
+}
+.product-title {
+    font-size: 2.5rem;
+    background-color:#3296fa85;
+    padding: 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    border-radius: 20px;
+    text-shadow: 2px 2px 4px rgba(8, 8, 8, 0.486);
+    margin: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
