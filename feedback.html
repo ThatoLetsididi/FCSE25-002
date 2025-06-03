@@ -44,7 +44,7 @@
     <h2 style="text-align: center; text-shadow: blue;">Feedback</h2>
     <p>We value your feedback! Please fill out the form below to share your thoughts and suggestions with us.</p>
     <hr>
-    <form action="submit" method="POST">
+    <form action="submit" onsubmit="showMessage(event)">
         <div class="mb-3">
             <label for="name" class="form-label">Name</label>
             <input type="text" class="form-control" id="name" name="name" required required-pattern="[A-Za-z\s]+">
