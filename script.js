@@ -1,12 +1,17 @@
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.querySelector('form');
     const nameInput = document.getElementById('name');
+    const nameInput = document.getElementById('surname');
     const emailInput = document.getElementById('email');
     
     // Create error message elements
     const nameError = document.createElement('div');
     nameError.className = 'invalid-feedback';
     nameInput.parentNode.appendChild(nameError);
+
+     const surnameError = document.createElement('div');
+    surnameError.className = 'invalid-feedback';
+    surnameInput.parentNode.appendChild(surnameError);
     
     const emailError = document.createElement('div');
     emailError.className = 'invalid-feedback';
@@ -14,14 +19,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Real-time validation
     nameInput.addEventListener('input', validateName);
+    surnameInput.addEventListener('input', validateSurname);
     emailInput.addEventListener('input', validateEmail);
 
     // Form submission validation
     form.addEventListener('submit', function(event) {
         const isNameValid = validateName();
+        const isSurnameValid = validateSurname();
         const isEmailValid = validateEmail();
         
-        if (!isNameValid || !isEmailValid) {
+        if (!isNameValid || !isEmailValid ) {
             event.preventDefault();
         }
     });
@@ -38,6 +45,22 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
             nameInput.classList.remove('is-invalid');
             nameError.textContent = '';
+            return true;
+        }
+    }
+
+    function validateSurname() {
+        const surnameValue = surnameInput.value.trim();
+        // Allows letters, spaces, hyphens, and apostrophes
+        const isValid = /^[A-Za-z\s'-]+$/.test(surnameValue);
+        
+        if (!isValid) {
+            surnameInput.classList.add('is-invalid');
+            surnameError.textContent = 'Surname should only contain letters, spaces, hyphens, or apostrophes';
+            return false;
+        } else {
+            surnameInput.classList.remove('is-invalid');
+            surnameError.textContent = '';
             return true;
         }
     }
