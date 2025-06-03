@@ -337,3 +337,25 @@ body {
     margin: 30px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
+.search-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 50px;
+    }
+    .search-bar {
+      width: 300px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .search-button {
+      padding: 10px 15px;
+      border: none;
+      background-color: #007BFF;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .search-button:hover {
+      background-color: #0056b3;
+    }
