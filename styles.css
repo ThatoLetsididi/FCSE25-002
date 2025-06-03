@@ -366,6 +366,8 @@ body {
 }
 
 .features h2 {
+    background-color: #44a0fcce;
+    border-radius: 8px;
     text-align: center;
     margin-bottom: 50px;
     font-size: 2rem;
