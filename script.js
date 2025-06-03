@@ -60,5 +60,5 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 function showMessage(event) {
             event.preventDefault(); // Prevent form from refreshing the page
-            alert("Form submitted successfully!");
+            alert("Form submitted successfully! Thank You For Your Feedback");
         }
